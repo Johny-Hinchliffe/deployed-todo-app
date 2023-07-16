@@ -11,6 +11,8 @@ const App = () => {
   const [ tasks, setTasks] = useState(null)
 
   const getData = async () => {
+    console.log(process.env.REACT_APP_SERVERURL)
+    console.log('Heelllloooo')
     try {
       const response = await fetch(`${process.env.REACT_APP_SERVERURL}/todos/${userEmail}`)
       const json = await response.json()
